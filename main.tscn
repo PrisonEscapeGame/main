@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvuqlb7upqf6o"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_g46e7"]
+[ext_resource type="PackedScene" uid="uid://df74twkh5djil" path="res://hud.tscn" id="2_ucm7d"]
+[ext_resource type="PackedScene" uid="uid://bn0356lemqwek" path="res://player.tscn" id="3_kghbl"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_g46e7")
+
+[node name="Player" parent="." instance=ExtResource("3_kghbl")]
+
+[node name="StartTimer" type="Timer" parent="."]
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(550, 320)
+
+[node name="HUD" parent="." instance=ExtResource("2_ucm7d")]
+
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="play_game" from="HUD" to="." method="play_game"]
