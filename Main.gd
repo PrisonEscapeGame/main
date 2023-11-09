@@ -6,4 +6,4 @@ func play_game():
 
 
 func _on_start_timer_timeout():
-	pass # Replace with function body.
+	pass # Replace with function body.adada
