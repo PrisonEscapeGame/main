@@ -1,7 +1,8 @@
 extends Node
 
 func play_game():
-	$Player.start($StartPosition.position)
+	$Player2.start($StartPosition.position)
+	$Guard2.start($StartPosition.position)
 	$StartTimer.start()
 
 

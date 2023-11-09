@@ -1,6 +1,7 @@
-extends Area2D
+extends CharacterBody2D
 
-@export var speed = 400 # How fast the player will move (pixels/sec).
+
+@export var SPEED = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 #var _smoothed_mouse_pos: Vector2
 
@@ -13,8 +14,8 @@ func start(pos):
 	position = pos
 	show()
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+
+func _physics_process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
@@ -26,7 +27,7 @@ func _process(delta):
 		velocity.y -= 1
 
 	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
+		velocity = velocity.normalized() * SPEED
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
@@ -38,7 +39,7 @@ func _process(delta):
 		$AnimatedSprite2D.flip_v = false
 		# See the note below about boolean assignment.
 		$AnimatedSprite2D.flip_h = velocity.x < 0
+	move_and_slide()
 	#_smoothed_mouse_pos = lerp(_smoothed_mouse_pos, get_global_mouse_position(), 0.3)
 	#look_at(_smoothed_mouse_pos)
-
 
