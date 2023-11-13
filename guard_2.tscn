@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dolbxgpicb72h"]
+[gd_scene load_steps=8 format=3 uid="uid://dolbxgpicb72h"]
 
 [ext_resource type="Script" path="res://guard_2.gd" id="1_4e6j8"]
 [ext_resource type="Texture2D" uid="uid://b8hq8kdqerkv8" path="res://assets/cop2idle.png" id="1_qjm7f"]
@@ -25,8 +25,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pv08n"]
 size = Vector2(61, 80)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wf8r4"]
+radius = 152.0
+
 [node name="Guard2" type="CharacterBody2D"]
-position = Vector2(262, 67)
+position = Vector2(266, 68)
 collision_mask = 0
 script = ExtResource("1_4e6j8")
 metadata/_edit_group_ = true
@@ -38,3 +41,8 @@ sprite_frames = SubResource("SpriteFrames_v7fpf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, -2)
 shape = SubResource("RectangleShape2D_pv08n")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_wf8r4")

@@ -14,7 +14,3 @@ func start(pos):
 	SPEED = 0
 	show()
 
-func _physics_process(delta):
-	pass
-
-	move_and_slide()
