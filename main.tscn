@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvuqlb7upqf6o"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_g46e7"]
+[ext_resource type="PackedScene" uid="uid://dwib58s6gj4mf" path="res://player2.tscn" id="2_fdhs6"]
+[ext_resource type="PackedScene" uid="uid://df74twkh5djil" path="res://hud.tscn" id="2_ucm7d"]
+[ext_resource type="PackedScene" uid="uid://dolbxgpicb72h" path="res://guard_2.tscn" id="3_bw0sh"]
+[ext_resource type="PackedScene" uid="uid://b5ucihlf5tyhp" path="res://pause_menu.tscn" id="5_ugiyy"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_g46e7")
+
+[node name="Player2" parent="." instance=ExtResource("2_fdhs6")]
+
+[node name="Guard2" parent="." instance=ExtResource("3_bw0sh")]
+
+[node name="StartTimer" type="Timer" parent="."]
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(550, 320)
+
+[node name="HUD" parent="." instance=ExtResource("2_ucm7d")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_ugiyy")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -97.0
+offset_right = -129.0
+offset_bottom = -97.0
+
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="play_game" from="HUD" to="." method="play_game"]
