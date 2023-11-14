@@ -7,8 +7,7 @@ var screen_size # Size of the game window.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	screen_size = get_viewport_rect().size
-	hide()
+	pass
 
 func start(pos):
 	position = pos
@@ -33,7 +32,7 @@ func _physics_process(delta):
 		$AnimatedSprite2D.stop()
 	
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
+	
 	if velocity.x != 0:
 		$AnimatedSprite2D.animation = "walk"
 		$AnimatedSprite2D.flip_v = false
