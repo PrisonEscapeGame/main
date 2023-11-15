@@ -13,10 +13,10 @@ func _process(delta):
 
 func pauseMenu():
 	if paused:
-		$PauseMenu.hide()
+		$Player2/FollowCam/PauseMenu.hide()
 		Engine.time_scale = 1
 	else:
-		$PauseMenu.show()
+		$Player2/FollowCam/PauseMenu.show()
 		Engine.time_scale = 0
 	
 	paused = !paused
