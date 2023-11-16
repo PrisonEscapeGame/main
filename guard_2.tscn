@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dolbxgpicb72h"]
+[gd_scene load_steps=10 format=3 uid="uid://dolbxgpicb72h"]
 
 [ext_resource type="Script" path="res://guard_2.gd" id="1_4e6j8"]
 [ext_resource type="Texture2D" uid="uid://b8hq8kdqerkv8" path="res://assets/cop2idle.png" id="1_qjm7f"]
 [ext_resource type="Texture2D" uid="uid://xf4woqrp5qr3" path="res://assets/cop2run1.png" id="2_jfrqt"]
 [ext_resource type="Texture2D" uid="uid://cntku4i4ojw3y" path="res://assets/cop2run2.png" id="3_mleym"]
+[ext_resource type="Script" path="res://guard_talk.gd" id="5_2002w"]
+[ext_resource type="PackedScene" uid="uid://dhpqq2c16iob0" path="res://dialogues/dialogue.tscn" id="5_n54t1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v7fpf"]
 animations = [{
@@ -43,6 +45,9 @@ position = Vector2(1.5, -2)
 shape = SubResource("RectangleShape2D_pv08n")
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_2002w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_wf8r4")
+
+[node name="Dialogue" parent="." instance=ExtResource("5_n54t1")]

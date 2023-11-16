@@ -3,27 +3,32 @@ extends CharacterBody2D
 
 @export var SPEED = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
+var gameOn = false
 #var _smoothed_mouse_pos: Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	hide()
 
 func start(pos):
+	gameOn = true
 	position = pos
 	show()
 	
 
 func _physics_process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
-	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
-	if Input.is_action_pressed("move_left"):
-		velocity.x -= 1
-	if Input.is_action_pressed("move_down"):
-		velocity.y += 1
-	if Input.is_action_pressed("move_up"):
-		velocity.y -= 1
+	if !gameOn:
+		return
+	else:
+		if Input.is_action_pressed("move_right"):
+			velocity.x += 1
+		if Input.is_action_pressed("move_left"):
+			velocity.x -= 1
+		if Input.is_action_pressed("move_down"):
+			velocity.y += 1
+		if Input.is_action_pressed("move_up"):
+			velocity.y -= 1
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * SPEED
