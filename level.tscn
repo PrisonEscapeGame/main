@@ -1,7 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://cpj6yun1a51ru"]
+[gd_scene load_steps=22 format=3 uid="uid://cpj6yun1a51ru"]
 
 [ext_resource type="Texture2D" uid="uid://djw3xjv12ylo8" path="res://assets/wallblue.png" id="2_ebim8"]
 [ext_resource type="Texture2D" uid="uid://bqynos0aqhmhy" path="res://assets/doorblue.png" id="3_0aj02"]
+[ext_resource type="Texture2D" uid="uid://5d5dqqfr42ms" path="res://assets/celldoor2.png" id="3_uy6e5"]
+[ext_resource type="Texture2D" uid="uid://dqa35h7etqcbj" path="res://assets/bed.png" id="4_xopmn"]
+[ext_resource type="Texture2D" uid="uid://b1xd48s364m0g" path="res://assets/table1.png" id="5_xfx3a"]
+[ext_resource type="Texture2D" uid="uid://cgp7b7rrjk0y" path="res://assets/panel.png" id="6_v2v63"]
+[ext_resource type="Texture2D" uid="uid://bcxab00w0wctb" path="res://assets/key.png" id="7_mq1q2"]
+[ext_resource type="Texture2D" uid="uid://durms7lnyoqdb" path="res://assets/officedoorred.png" id="8_5wyuw"]
+[ext_resource type="Texture2D" uid="uid://cxt7yir8nxq7k" path="res://assets/desk.png" id="9_4k1m2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3x7bx"]
 size = Vector2(69, 901.875)
@@ -35,6 +42,9 @@ size = Vector2(65.25, 521.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3hwp"]
 size = Vector2(137, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pg3na"]
+size = Vector2(1057, 254)
 
 [node name="Level" type="Node2D"]
 
@@ -617,3 +627,165 @@ shape = SubResource("RectangleShape2D_u3wxj")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="BottomWallStaticBody"]
 position = Vector2(967.5, 375)
 shape = SubResource("RectangleShape2D_v3hwp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(123, 645.25)
+scale = Vector2(0.151976, 0.136404)
+texture = ExtResource("3_uy6e5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1137, 645)
+scale = Vector2(0.142857, 0.137719)
+texture = ExtResource("3_uy6e5")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(967.5, 651)
+scale = Vector2(0.183891, 0.137719)
+texture = ExtResource("3_uy6e5")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(794.5, 649)
+scale = Vector2(0.156535, 0.137719)
+texture = ExtResource("3_uy6e5")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(629.5, 646)
+scale = Vector2(0.165654, 0.137719)
+texture = ExtResource("3_uy6e5")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(465.5, 641)
+scale = Vector2(0.177812, 0.137719)
+texture = ExtResource("3_uy6e5")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(289.5, 649)
+scale = Vector2(0.168693, 0.137719)
+texture = ExtResource("3_uy6e5")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(88, 771)
+scale = Vector2(0.0703125, 0.10596)
+texture = ExtResource("4_xopmn")
+
+[node name="Sprite2D13" type="Sprite2D" parent="."]
+position = Vector2(1110, 775)
+scale = Vector2(0.0703125, 0.10596)
+texture = ExtResource("4_xopmn")
+
+[node name="Sprite2D14" type="Sprite2D" parent="."]
+position = Vector2(932, 775)
+scale = Vector2(0.0703125, 0.10596)
+texture = ExtResource("4_xopmn")
+
+[node name="Sprite2D15" type="Sprite2D" parent="."]
+position = Vector2(768, 775)
+scale = Vector2(0.0703125, 0.10596)
+texture = ExtResource("4_xopmn")
+
+[node name="Sprite2D16" type="Sprite2D" parent="."]
+position = Vector2(604, 773)
+scale = Vector2(0.0703125, 0.10596)
+texture = ExtResource("4_xopmn")
+
+[node name="Sprite2D17" type="Sprite2D" parent="."]
+position = Vector2(441, 770)
+scale = Vector2(0.0703125, 0.10596)
+texture = ExtResource("4_xopmn")
+
+[node name="Table6" type="Sprite2D" parent="Sprite2D17"]
+position = Vector2(7765.33, 330.312)
+scale = Vector2(1.09329, 0.734377)
+texture = ExtResource("5_xfx3a")
+
+[node name="Sprite2D18" type="Sprite2D" parent="."]
+position = Vector2(256, 773)
+scale = Vector2(0.0703125, 0.10596)
+texture = ExtResource("4_xopmn")
+
+[node name="Table1" type="Sprite2D" parent="."]
+position = Vector2(140, 802)
+scale = Vector2(0.0768717, 0.0778148)
+texture = ExtResource("5_xfx3a")
+
+[node name="Table5" type="Sprite2D" parent="."]
+position = Vector2(1159, 803)
+scale = Vector2(0.0768717, 0.0778148)
+texture = ExtResource("5_xfx3a")
+
+[node name="Table7" type="Sprite2D" parent="."]
+position = Vector2(824, 798)
+scale = Vector2(0.0768717, 0.0778148)
+texture = ExtResource("5_xfx3a")
+
+[node name="Table8" type="Sprite2D" parent="."]
+position = Vector2(654, 800)
+scale = Vector2(0.0768717, 0.0778148)
+texture = ExtResource("5_xfx3a")
+
+[node name="Table9" type="Sprite2D" parent="."]
+position = Vector2(488, 800)
+scale = Vector2(0.0768717, 0.0778148)
+texture = ExtResource("5_xfx3a")
+
+[node name="Table10" type="Sprite2D" parent="."]
+position = Vector2(306, 800)
+scale = Vector2(0.0768717, 0.0778148)
+texture = ExtResource("5_xfx3a")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(210, 696)
+scale = Vector2(0.252252, 1.07553)
+texture = ExtResource("6_v2v63")
+
+[node name="Sprite2D21" type="Sprite2D" parent="."]
+position = Vector2(1214, 693)
+scale = Vector2(0.252252, 1.07553)
+texture = ExtResource("6_v2v63")
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(1057, 696)
+scale = Vector2(0.252252, 1.07553)
+texture = ExtResource("6_v2v63")
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+position = Vector2(877, 692)
+scale = Vector2(0.252252, 1.07553)
+texture = ExtResource("6_v2v63")
+
+[node name="Sprite2D12" type="Sprite2D" parent="."]
+position = Vector2(717, 694)
+scale = Vector2(0.252252, 1.07553)
+texture = ExtResource("6_v2v63")
+
+[node name="Sprite2D19" type="Sprite2D" parent="."]
+position = Vector2(547, 692)
+scale = Vector2(0.252252, 1.07553)
+texture = ExtResource("6_v2v63")
+
+[node name="Sprite2D20" type="Sprite2D" parent="."]
+position = Vector2(375, 695)
+scale = Vector2(0.252252, 1.07553)
+texture = ExtResource("6_v2v63")
+
+[node name="Key" type="Sprite2D" parent="."]
+position = Vector2(1917, 1179)
+scale = Vector2(0.0963489, 0.177419)
+texture = ExtResource("7_mq1q2")
+
+[node name="Officedoorred" type="Sprite2D" parent="."]
+position = Vector2(1298, 636)
+scale = Vector2(0.210598, 0.13476)
+texture = ExtResource("8_5wyuw")
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(1297, 797)
+scale = Vector2(0.116631, 0.0807951)
+texture = ExtResource("9_4k1m2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(212, 694)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(499.5, 0)
+shape = SubResource("RectangleShape2D_pg3na")
