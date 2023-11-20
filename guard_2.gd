@@ -3,11 +3,7 @@ extends CharacterBody2D
 const speed = 200
 var current_state = IDLE
 var dir = Vector2.LEFT
-
-
-
-func _ready():
-	randomize()
+var start_pos
 
 enum {
 	IDLE,
@@ -15,7 +11,18 @@ enum {
 	MOVE
 }
 
+func _ready():
+	randomize()
+
 func _process(delta):
+	
+	if current_state == 0:
+		$AnimatedSprite2D.stop()
+	if current_state == 1:
+		$AnimatedSprite2D.stop()
+	if current_state == 2:
+		$AnimatedSprite2D.play("walk")	
+	
 	match current_state:
 		IDLE:
 			pass
@@ -26,8 +33,11 @@ func _process(delta):
 			
 func move(delta):
 	position += dir * speed * delta
-
-
+	if dir.x == 1:
+		$AnimatedSprite2D.flip_h = false
+	elif dir.x == -1:
+		$AnimatedSprite2D.flip_h = true
+		
 func choose(array):
 	array.shuffle()
 	return array.front()
