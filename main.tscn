@@ -366,7 +366,7 @@ offset_bottom = -118.989
 [node name="Dialogue" parent="Player2/FollowCam" instance=ExtResource("6_qkljw")]
 
 [node name="Guard2" parent="." instance=ExtResource("3_bw0sh")]
-position = Vector2(297, 413)
+position = Vector2(554, 426)
 
 [node name="StartTimer" type="Timer" parent="."]
 

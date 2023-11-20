@@ -4,7 +4,7 @@ var paused = false
 
 func play_game():
 	$Player2.start($StartPosition.position)
-	$Guard2.start($StartPosition.position)
+#	$Guard2.start($StartPosition.position)
 	$StartTimer.start()
 
 func _process(delta):

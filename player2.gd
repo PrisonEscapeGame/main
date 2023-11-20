@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var SPEED = 400 # How fast the player will move (pixels/sec).
+@export var SPEED = 200 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 var gameOn = false
 #var _smoothed_mouse_pos: Vector2
