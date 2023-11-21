@@ -31,8 +31,13 @@ size = Vector2(61, 80)
 radius = 152.0
 
 [node name="Guard2" type="CharacterBody2D"]
+<<<<<<< Updated upstream
 position = Vector2(259, 83)
 collision_mask = 2
+=======
+position = Vector2(620, 298)
+collision_mask = 31
+>>>>>>> Stashed changes
 script = ExtResource("1_4e6j8")
 metadata/_edit_group_ = true
 
