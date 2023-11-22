@@ -1,14 +1,19 @@
-[gd_scene load_steps=22 format=3 uid="uid://cpj6yun1a51ru"]
+[gd_scene load_steps=25 format=3 uid="uid://cpj6yun1a51ru"]
 
 [ext_resource type="Texture2D" uid="uid://djw3xjv12ylo8" path="res://assets/wallblue.png" id="2_ebim8"]
 [ext_resource type="Texture2D" uid="uid://bqynos0aqhmhy" path="res://assets/doorblue.png" id="3_0aj02"]
 [ext_resource type="Texture2D" uid="uid://5d5dqqfr42ms" path="res://assets/celldoor2.png" id="3_uy6e5"]
+[ext_resource type="Script" path="res://ExitDoor.gd" id="4_w2fmo"]
 [ext_resource type="Texture2D" uid="uid://dqa35h7etqcbj" path="res://assets/bed.png" id="4_xopmn"]
 [ext_resource type="Texture2D" uid="uid://b1xd48s364m0g" path="res://assets/table1.png" id="5_xfx3a"]
 [ext_resource type="Texture2D" uid="uid://cgp7b7rrjk0y" path="res://assets/panel.png" id="6_v2v63"]
 [ext_resource type="Texture2D" uid="uid://bcxab00w0wctb" path="res://assets/key.png" id="7_mq1q2"]
 [ext_resource type="Texture2D" uid="uid://durms7lnyoqdb" path="res://assets/officedoorred.png" id="8_5wyuw"]
 [ext_resource type="Texture2D" uid="uid://cxt7yir8nxq7k" path="res://assets/desk.png" id="9_4k1m2"]
+[ext_resource type="Script" path="res://PinLineEdit.gd" id="12_fuxhe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ph0dd"]
+size = Vector2(563.32, 1058.53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3x7bx"]
 size = Vector2(69, 901.875)
@@ -563,10 +568,17 @@ position = Vector2(75, 40)
 scale = Vector2(0.242647, 0.293522)
 texture = ExtResource("2_ebim8")
 
-[node name="Doorblue" type="Sprite2D" parent="."]
+[node name="ExitDoor" type="Sprite2D" parent="."]
 position = Vector2(1787.13, 1237)
 scale = Vector2(0.131364, 0.0699082)
 texture = ExtResource("3_0aj02")
+script = ExtResource("4_w2fmo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ExitDoor"]
+
+[node name="DoorCollisionShape" type="CollisionShape2D" parent="ExitDoor/StaticBody2D"]
+position = Vector2(6.62305, -0.00195313)
+shape = SubResource("RectangleShape2D_ph0dd")
 
 [node name="LeftWallStaticBody" type="StaticBody2D" parent="."]
 position = Vector2(34, 261)
@@ -789,3 +801,21 @@ position = Vector2(212, 694)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(499.5, 0)
 shape = SubResource("RectangleShape2D_pg3na")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 1710.0
+offset_top = 1199.0
+offset_right = 1750.0
+offset_bottom = 1216.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_left = 1705.0
+offset_top = 1183.0
+offset_right = 1778.0
+offset_bottom = 1230.0
+
+[node name="LineEdit" type="LineEdit" parent="CenterContainer"]
+layout_mode = 2
+script = ExtResource("12_fuxhe")
+
+[connection signal="text_submitted" from="CenterContainer/LineEdit" to="CenterContainer/LineEdit" method="_on_text_submitted"]
