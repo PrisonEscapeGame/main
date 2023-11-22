@@ -7,10 +7,16 @@
 script = ExtResource("1_17l8c")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-offset_left = 34.0
-offset_top = 485.0
-offset_right = 1196.0
-offset_bottom = 656.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -524.0
+offset_top = -171.0
+offset_right = 577.0
+grow_horizontal = 2
+grow_vertical = 0
 scale = Vector2(0.931969, 0.911335)
 texture = ExtResource("1_gllsf")
 patch_margin_left = 1
