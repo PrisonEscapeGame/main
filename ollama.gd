@@ -1,9 +1,10 @@
 extends Node
 
+
 func send_text(text, context = []):
 	
 	var data = {
-		"model": "assistant",
+		"model": "guard",
 		"prompt": text,
 		"context": context,
 		"stream": false
@@ -11,7 +12,7 @@ func send_text(text, context = []):
 	
 	var json = JSON.stringify(data)
 	
-	var error = $HTTPRequest.request("http://127.0.0.1:11434/api/generate", 
+	var error = $HTTPRequest.request("http://huitsinnevada.fi:2440/api/generate", 
 		["Content-Type: application/json"], HTTPClient.METHOD_POST, json)
 	
 	if error != OK:
