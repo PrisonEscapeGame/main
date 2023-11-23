@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhpqq2c16iob0"]
+
+[ext_resource type="Script" path="res://dialogues/dialogue.gd" id="1_17l8c"]
+[ext_resource type="Texture2D" uid="uid://4h5u1jeufc4b" path="res://assets/dialogueBox2.png" id="1_gllsf"]
+
+[node name="Dialogue" type="CanvasLayer"]
+script = ExtResource("1_17l8c")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -524.0
+offset_top = -171.0
+offset_right = 577.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.931969, 0.911335)
+texture = ExtResource("1_gllsf")
+patch_margin_left = 1
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 13.0
+offset_right = 285.0
+offset_bottom = 38.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Name"
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 47.0
+offset_right = 1120.0
+offset_bottom = 153.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Test
+"

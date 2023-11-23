@@ -9,24 +9,27 @@ shader_parameter/amount = 1.0
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 1.0
-offset_right = -885.0
-offset_bottom = -446.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -94.0
+offset_right = -129.0
+offset_bottom = -94.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5rjmu")
+metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_78sbr")
 layout_mode = 0
-offset_left = -473.0
-offset_top = -298.0
-offset_right = 1726.0
-offset_bottom = 872.0
+offset_left = -2468.0
+offset_top = -1442.0
+offset_right = 3409.0
+offset_bottom = 2058.0
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
