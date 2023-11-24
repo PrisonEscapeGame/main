@@ -22,5 +22,8 @@ func pauseMenu():
 	
 	paused = !paused
 
-func _on_start_timer_timeout():
-	pass # Replace with function body.adada
+func getPosition():
+	if getPosition:
+		var playerPos = $Player2.position
+		var guardPos = $Guard2.position
+		print(playerPos, guardPos)

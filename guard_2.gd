@@ -14,8 +14,10 @@ enum {
 func _ready():
 	randomize()
 
+func setCurrentState():
+	current_state = IDLE
+
 func _process(delta):
-	
 	if current_state == 0:
 		$AnimatedSprite2D.stop()
 	if current_state == 1:
