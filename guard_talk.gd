@@ -17,7 +17,7 @@ func _input(event):
 			$"..".setCurrentState()
 		else:
 			$"../Timer".start()
-			$"../../Chat".hide()
+			$"../../CanvasChat".hide()
 
 func pauseGame():
 	if activeDialogue:
@@ -28,7 +28,7 @@ func pauseGame():
 	activeDialogue = !activeDialogue
 
 func use_dialogue():
-	var dialogue = $"../../Chat"
+	var dialogue = $"../../CanvasChat"
 	
 	if dialogue:
 		dialogue.start()

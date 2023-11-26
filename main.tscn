@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dolbxgpicb72h" path="res://guard_2.tscn" id="3_bw0sh"]
 [ext_resource type="PackedScene" uid="uid://b5ucihlf5tyhp" path="res://pause_menu.tscn" id="5_ugiyy"]
 [ext_resource type="PackedScene" uid="uid://cpj6yun1a51ru" path="res://level.tscn" id="6_ugln6"]
-[ext_resource type="PackedScene" uid="uid://bpt0pu778w2u1" path="res://chat.tscn" id="8_2bhe5"]
+[ext_resource type="PackedScene" uid="uid://ca6fhom2h331a" path="res://canvas_chat.tscn" id="8_l5hp8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lo3vl"]
 texture = ExtResource("2_f25cb")
@@ -366,19 +366,13 @@ offset_top = -118.989
 offset_right = -131.711
 offset_bottom = -118.989
 
-[node name="Chat" parent="." instance=ExtResource("8_2bhe5")]
-offset_left = -407.0
-offset_top = -232.5
-offset_right = 407.0
-offset_bottom = 232.5
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
 [node name="StartTimer" type="Timer" parent="."]
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(575, 307)
 
 [node name="HUD" parent="." instance=ExtResource("2_ucm7d")]
+
+[node name="CanvasChat" parent="." instance=ExtResource("8_l5hp8")]
 
 [connection signal="play_game" from="HUD" to="." method="play_game"]

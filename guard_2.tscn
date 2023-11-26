@@ -30,7 +30,7 @@ size = Vector2(66, 80)
 radius = 143.031
 
 [node name="Guard2" type="CharacterBody2D"]
-position = Vector2(620, 298)
+position = Vector2(627, 299)
 collision_layer = 3
 collision_mask = 31
 script = ExtResource("1_4e6j8")
