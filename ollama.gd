@@ -17,6 +17,7 @@ func send_text(text, context = []):
 	
 	if error != OK:
 		print("An error occurred.")
+	print("text send")
 
 func _ready():
 	$HTTPRequest.request_completed.connect(_on_request_completed)

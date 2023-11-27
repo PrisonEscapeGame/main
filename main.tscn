@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cvuqlb7upqf6o"]
+[gd_scene load_steps=12 format=3 uid="uid://cvuqlb7upqf6o"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_g46e7"]
 [ext_resource type="Texture2D" uid="uid://cfvby3omudub0" path="res://assets/ground.png" id="2_f25cb"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b5ucihlf5tyhp" path="res://pause_menu.tscn" id="5_ugiyy"]
 [ext_resource type="PackedScene" uid="uid://cpj6yun1a51ru" path="res://level.tscn" id="6_ugln6"]
 [ext_resource type="PackedScene" uid="uid://ca6fhom2h331a" path="res://canvas_chat.tscn" id="8_l5hp8"]
+[ext_resource type="PackedScene" uid="uid://coqd1h3e62f17" path="res://ollama_integration.tscn" id="9_00g2j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lo3vl"]
 texture = ExtResource("2_f25cb")
@@ -374,5 +375,7 @@ position = Vector2(575, 307)
 [node name="HUD" parent="." instance=ExtResource("2_ucm7d")]
 
 [node name="CanvasChat" parent="." instance=ExtResource("8_l5hp8")]
+
+[node name="None" parent="." instance=ExtResource("9_00g2j")]
 
 [connection signal="play_game" from="HUD" to="." method="play_game"]
