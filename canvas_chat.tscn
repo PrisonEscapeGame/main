@@ -31,10 +31,11 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TextHistory" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TextArea"]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TextArea"]
 layout_mode = 2
+horizontal_scroll_mode = 0
 
-[node name="Response" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TextArea/TextHistory"]
+[node name="TextHistory" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TextArea/ScrollContainer"]
 layout_mode = 2
 
 [node name="ChatArea" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]

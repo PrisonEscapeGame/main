@@ -1,6 +1,9 @@
 extends Node
 
 var paused = false
+#var checkDialogue = get_node("yourNode").get("yourVariable")
+@onready var guardTalk = $"res://guard_talk.gd"
+var checkDialogue = guardTalk.activeDialogue
 
 func play_game():
 	$Player2/FollowCam/PauseMenu.hide()
@@ -8,7 +11,7 @@ func play_game():
 	$StartTimer.start()
 
 func _process(delta):
-	if Input.is_action_just_pressed("pause"):
+	if Input.is_action_just_pressed("pause") and checkDialogue == false:
 		pauseMenu()
 
 func pauseMenu():
@@ -20,9 +23,3 @@ func pauseMenu():
 		Engine.time_scale = 0
 	
 	paused = !paused
-
-func getPosition():
-	if getPosition:
-		var playerPos = $Player2.position
-		var guardPos = $Guard2.position
-		print(playerPos, guardPos)
