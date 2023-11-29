@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cmdborcgourf0"]
+
+[node name="InputResponse" type="VBoxContainer"]
+
+[node name="InputHistory" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "This is what the user typed"
+
+[node name="Response" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "This is the response"
