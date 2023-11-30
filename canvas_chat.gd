@@ -10,10 +10,10 @@ func _ready():
 func start():
 	show()
 
-
 func _on_input_text_submitted(new_text):
 	sendText.send_text(new_text)
 	var input_response = InputResponse.instantiate()
+	input_response.set_text(new_text, "response")
 	text_history.add_child(input_response)
 	
 

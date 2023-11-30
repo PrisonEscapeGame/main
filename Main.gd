@@ -1,18 +1,17 @@
 extends Node
 
 var paused = false
-#var checkDialogue = get_node("yourNode").get("yourVariable")
-@onready var guardTalk = $"res://guard_talk.gd"
-#var checkDialogue = guardTalk.activeDialogue
+var canvasVisibility = true
 
 func play_game():
 	$Player2/FollowCam/PauseMenu.hide()
 	$Player2.start($StartPosition.position)
 	$StartTimer.start()
 
-func _process(delta):
-	if Input.is_action_just_pressed("pause"): #and checkDialogue == false:
+func _input(event):
+	if event.is_action_pressed("pause") and canvasVisibility == false:
 		pauseMenu()
+		print(canvasVisibility, " pausemenu")
 
 func pauseMenu():
 	if paused:
@@ -23,3 +22,8 @@ func pauseMenu():
 		Engine.time_scale = 0
 	
 	paused = !paused
+
+
+func _on_canvas_chat_visibility_changed():
+	canvasVisibility = !canvasVisibility
+	print("main: ", canvasVisibility)
