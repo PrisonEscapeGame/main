@@ -1,7 +1,6 @@
 extends Node
 
 var paused = false
-var canvasVisibility = true
 
 func play_game():
 	$Player2/FollowCam/PauseMenu.hide()
@@ -9,9 +8,8 @@ func play_game():
 	$StartTimer.start()
 
 func _input(event):
-	if event.is_action_pressed("pause") and canvasVisibility == false:
+	if event.is_action_pressed("pause"):
 		pauseMenu()
-		print(canvasVisibility, " pausemenu")
 
 func pauseMenu():
 	if paused:
@@ -23,7 +21,3 @@ func pauseMenu():
 	
 	paused = !paused
 
-
-func _on_canvas_chat_visibility_changed():
-	canvasVisibility = !canvasVisibility
-	print("main: ", canvasVisibility)

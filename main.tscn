@@ -385,4 +385,3 @@ position = Vector2(857, 437)
 position = Vector2(1620, 608)
 
 [connection signal="play_game" from="HUD" to="." method="play_game"]
-[connection signal="visibility_changed" from="CanvasChat" to="." method="_on_canvas_chat_visibility_changed"]
