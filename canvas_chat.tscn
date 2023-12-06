@@ -53,7 +53,7 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer"]
 layout_mode = 2
-text = "Quit"
+text = "Close"
 
 [connection signal="text_submitted" from="PanelContainer/MarginContainer/VBoxContainer/ChatArea/Input" to="." method="_on_input_text_submitted"]
 [connection signal="text_submitted" from="PanelContainer/MarginContainer/VBoxContainer/ChatArea/Input" to="PanelContainer/MarginContainer/VBoxContainer/ChatArea/Input" method="_on_text_submitted"]
