@@ -1,5 +1,7 @@
 extends Node
 
+var response = ""
+signal response_received
 
 func send_text(text, context = []):
 	
@@ -25,5 +27,9 @@ func _ready():
 # Example implementation: 
 func _on_request_completed(result, response_code, headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
-	print(json["response"])
+	response = json["response"]
+	print(response)
+	
+	emit_signal("response_received", response)
+
 
