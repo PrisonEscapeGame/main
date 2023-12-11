@@ -26,8 +26,8 @@ animations = [{
 size = Vector2(53, 79)
 
 [node name="Player2" type="CharacterBody2D"]
-collision_layer = 21
-collision_mask = 31
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_nmb2c")
 metadata/_edit_group_ = true
 

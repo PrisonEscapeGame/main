@@ -354,11 +354,9 @@ position = Vector2(7, 3)
 
 [node name="Guard2" parent="." instance=ExtResource("3_bw0sh")]
 position = Vector2(554, 426)
-collision_layer = 1
 
 [node name="Player2" parent="." instance=ExtResource("2_fdhs6")]
 position = Vector2(687, 433)
-collision_layer = 23
 
 [node name="FollowCam" type="Camera2D" parent="Player2"]
 scale = Vector2(1.0022, 0.991689)
@@ -381,7 +379,9 @@ position = Vector2(857, 437)
 
 [node name="None" parent="." instance=ExtResource("9_00g2j")]
 
-[node name="Area2D" parent="." instance=ExtResource("10_2t8a0")]
-position = Vector2(1620, 608)
+[node name="KameraArea2D" parent="." instance=ExtResource("10_2t8a0")]
+position = Vector2(1622, 680)
 
 [connection signal="play_game" from="HUD" to="." method="play_game"]
+[connection signal="body_entered" from="KameraArea2D" to="Guard2" method="_on_kamera_area_2d_body_entered"]
+[connection signal="body_exited" from="KameraArea2D" to="Guard2" method="_on_kamera_area_2d_body_exited"]
