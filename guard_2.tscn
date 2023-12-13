@@ -31,8 +31,7 @@ radius = 143.031
 
 [node name="Guard2" type="CharacterBody2D"]
 position = Vector2(627, 299)
-collision_layer = 3
-collision_mask = 31
+collision_mask = 3
 script = ExtResource("1_4e6j8")
 metadata/_edit_group_ = true
 
@@ -42,15 +41,19 @@ sprite_frames = SubResource("SpriteFrames_v7fpf")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 3
+visibility_layer = 3
 position = Vector2(3, -4)
 shape = SubResource("RectangleShape2D_pv08n")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_layer = 16
-collision_mask = 16
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("5_2002w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+light_mask = 3
+visibility_layer = 3
 shape = SubResource("CircleShape2D_wf8r4")
 
 [node name="Timer" type="Timer" parent="."]
