@@ -16,6 +16,9 @@ The Player can start the AI dialogue by being near the guard and then press "E" 
 
 After getting the code from the AI the player can leave the prison!
 
+## Free assets that we used
+https://adarshs.itch.io/prison-game-asset-pack
+
 ## Credits
 
 Timon Poutiainen
