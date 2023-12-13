@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://coqd1h3e62f17"]
+
+[ext_resource type="Script" path="res://ollama.gd" id="1_2gq4i"]
+
+[node name="None" type="Node"]
+script = ExtResource("1_2gq4i")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

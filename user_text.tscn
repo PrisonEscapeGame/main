@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://drxe87oxai58r"]
+
+[node name="UserText" type="Label"]
+size_flags_vertical = 6
+text = "UserInput"
+autowrap_mode = 3
