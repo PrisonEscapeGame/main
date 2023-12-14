@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cpj6yun1a51ru"]
+[gd_scene load_steps=26 format=3 uid="uid://cpj6yun1a51ru"]
 
 [ext_resource type="Texture2D" uid="uid://djw3xjv12ylo8" path="res://assets/wallblue.png" id="2_ebim8"]
 [ext_resource type="Texture2D" uid="uid://bqynos0aqhmhy" path="res://assets/doorblue.png" id="3_0aj02"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bcxab00w0wctb" path="res://assets/key.png" id="7_mq1q2"]
 [ext_resource type="Texture2D" uid="uid://durms7lnyoqdb" path="res://assets/officedoorred.png" id="8_5wyuw"]
 [ext_resource type="Texture2D" uid="uid://cxt7yir8nxq7k" path="res://assets/desk.png" id="9_4k1m2"]
+[ext_resource type="PackedScene" uid="uid://b6tqdw5x5sk1v" path="res://you_won.tscn" id="12_bgvxt"]
 [ext_resource type="Script" path="res://PinLineEdit.gd" id="12_fuxhe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ph0dd"]
@@ -817,5 +818,7 @@ offset_bottom = 1230.0
 [node name="LineEdit" type="LineEdit" parent="CenterContainer"]
 layout_mode = 2
 script = ExtResource("12_fuxhe")
+
+[node name="You WON!" parent="." instance=ExtResource("12_bgvxt")]
 
 [connection signal="text_submitted" from="CenterContainer/LineEdit" to="CenterContainer/LineEdit" method="_on_text_submitted"]
