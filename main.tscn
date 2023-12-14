@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cvuqlb7upqf6o"]
+[gd_scene load_steps=13 format=3 uid="uid://cvuqlb7upqf6o"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_g46e7"]
 [ext_resource type="Texture2D" uid="uid://cfvby3omudub0" path="res://assets/ground.png" id="2_f25cb"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://ca6fhom2h331a" path="res://canvas_chat.tscn" id="8_l5hp8"]
 [ext_resource type="PackedScene" uid="uid://coqd1h3e62f17" path="res://ollama_integration.tscn" id="9_00g2j"]
 [ext_resource type="PackedScene" uid="uid://cy44buciooy6u" path="res://kamera.tscn" id="10_2t8a0"]
-[ext_resource type="PackedScene" uid="uid://b6tqdw5x5sk1v" path="res://you_won.tscn" id="11_2emje"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lo3vl"]
 texture = ExtResource("2_f25cb")
@@ -382,8 +381,6 @@ position = Vector2(857, 437)
 
 [node name="KameraArea2D" parent="." instance=ExtResource("10_2t8a0")]
 position = Vector2(1622, 680)
-
-[node name="You WON!" parent="." instance=ExtResource("11_2emje")]
 
 [connection signal="play_game" from="HUD" to="." method="play_game"]
 [connection signal="body_entered" from="KameraArea2D" to="Guard2" method="_on_kamera_area_2d_body_entered"]
